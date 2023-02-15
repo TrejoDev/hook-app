@@ -6,7 +6,7 @@ export const MultipleCustomHook = () => {
 
     const { data, isLoading, hasError } = useFetch( 'https://api.breakingbadquotes.xyz/v1/quotes/2' );
 
-   const { author, quote } = !!data && data[0]; //Si la data tiene valor para eso hacemos q sea false, entonces toma la data[0]. 
+   const { author, quote } = !!data && data[0]; //Queremos q data no sea null, para eso hacemos q sea false, entonces puede tomar data[0]. 
                                             //Queremos obtener un false de un null, cuando lo niega 1 vez ! es true y 2 veces !! es false.
 
     //console.log(data);
